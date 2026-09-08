@@ -1,8 +1,19 @@
+/* donwload terlebih dahulu font */
 @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+
+:root{
+    --primary-color : #2F39A9;
+    --accent-color : #2E6FA0;
+    --font-primary : #2F39A9;
+    --font-secondary : #2b2b2b;
+}
+
 
 * {
     font-family: "Google Sans", sans-serif;
 }
+
 
 body{
     background-color: #f0f0f0;
@@ -13,13 +24,13 @@ body{
 }
 
 .berita{
-    background-color: #00ffff;
+    background-color: var(--accent-color);
 }
 
 .berita span {
     color: #0088cc;
     font-weight: 700;
-    background-color: #ffbe99;
+    background-color: var(--primary-color);
 }
 
 .card-image{
@@ -28,6 +39,8 @@ body{
     background-image: url('https://cdn.mos.cms.futurecdn.net/v2/t:0,l:464,cw:1193,ch:1193,q:80,w:1193/57jQMDN5MZLYfV8ps8HuZQ.jpg');
     background-size: cover;
     color: #ffffff;
+    padding: 20px 30px;
+    margin: 20px 0;
 }
 
 .card-image-panel{
@@ -37,6 +50,8 @@ body{
     url('https://cdn.mos.cms.futurecdn.net/v2/t:0,l:464,cw:1193,ch:1193,q:80,w:1193/57jQMDN5MZLYfV8ps8HuZQ.jpg');
     background-size: cover;
     color: #ffffff;
+    padding: 20px 30px;
+    margin: 20px 0;
 }
 
 .card-gradient{
@@ -45,6 +60,8 @@ body{
     background: linear-gradient(to top right, #0088cc, #003d3d);
     background-size: cover;
     color: #ffffff;
+    padding: 20px 30px;
+    margin: 20px 0;
 }
 
 .card-gradient h2{
@@ -66,4 +83,54 @@ body{
 .card-gradient p{
     line-height: 1.3;
 }
+
+.simple-card{
+    width: 144px;
+    min-height: 60px;
+    padding: 24px;
+    border: 0.3px solid #4e4e4e60;
+    border-radius: 8px;
+}
+
+.container{
+    width: 80dvw;
+    min-height: 200px;
+    margin: 30px 10px;
+    padding: 20px;
+    border: 0.4px solid #3e3e3e60;
+    border-radius: 8px;
+}
+
+.card{
+    width: 100%;
+}
+
+.card div{
+    width: 30%;
+    margin: 10px;
+    padding: 10px;
+    border: 0.4px solid #3e3e3e60;
+}
+
+.card span{
+    width: 30%;
+    margin: 10px 20px;
+    padding: 20px 30px;
+    border: 0.4px solid #3e3e3e60;
+}
+
+.d-block{
+    display: block;
+}
+
+.d-inline, .nav-item{
+    display: inline;
+}
+
+.nav-item{
+    margin: 10px;
+}
+
+
+
 
