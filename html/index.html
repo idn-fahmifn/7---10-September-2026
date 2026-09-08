@@ -5,6 +5,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <!-- memanggil external css -->
+     <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- mendeklarasikan css dengan internal css -->
+    <style>
+
+        .text-red{
+            color: #ff0000;
+        }
+
+        h2, h3{
+            color: #0088cc;
+        }
+
+    </style>
+
 </head>
 
 <body>
@@ -14,7 +31,7 @@
     <h2>Judul yang ke 2</h2>
     <h3>Judul yang ke 3</h3>
     <h4>Judul yang ke 4</h4>
-    <h5>Judul yang ke 5</h5>
+    <h5 class="text-blue">Judul yang ke 5</h5>
     <h6>Judul yang ke 6</h6>
 
     <p>
@@ -32,7 +49,7 @@
         Jadwal Pelatihan IDN
     </a>
 
-    <h2>Selamat datang di Training IDN</h2>
+    <h2 class="text-red">Selamat datang di Training IDN</h2>
     <p>Berikut adalah pilihan training : </p>
     <ul style="list-style: none;">
         <li>Web Basic Programming</li>
@@ -64,16 +81,22 @@
 
 
     <!-- form input -->
-     <form action="">
+     <form action="" method="">
 
         <!-- input -->
+
+        <div class="" style="padding: 10px;">
+            <label for="">User ID</label>
+            <input type="text" value="USR-001" readonly required>
+        </div>
+
         <div class="" style="padding: 10px;">
             <label for="">Nama Lengkap</label>
-            <input type="text" required>
+            <input type="text" required placeholder="Ex. Asep Saefulloh">
         </div>
         <div class="" style="padding: 10px;">
-            <label for="">Alamat Email</label>
-            <input type="email" required>
+            <label for="email">Alamat Email</label>
+            <input type="email" id="email" required>
         </div>
 
         <div class="" style="padding: 10px;">
@@ -86,7 +109,7 @@
             </select>
         </div>
 
-        <div class="">
+        <div class="" style="padding: 10px;">
             <label for="">Deskripsi</label>
             <textarea name="" id=""></textarea>
         </div>
@@ -94,6 +117,65 @@
         <button type="submit">Kirim</button>
 
      </form>
+
+     <div class="" style="margin: 50px 10px;">
+
+        <table style="width: 80dvw; border-collapse: collapse;" border="1">
+            <thead>
+                <th style="padding: 20px 5px;">Nama Kelas</th>
+                <th style="padding: 20px 5px;">Trainer</th>
+                <th style="padding: 20px 5px;">Deskripsi</th>
+                <th style="padding: 20px 5px;">Status</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>MTCNA</td>
+                    <td>Agus Sudirman</td>
+                    <td>Lorem ipsum dolor sit amet consectetur.</td>
+                    <td rowspan="2">Running</td>
+                </tr>
+                <tr>
+                    <td>MTCINE</td>
+                    <td>Soleh Sudirman</td>
+                    <td>Lorem ipsum dolor sit amet consectetur.</td>
+                </tr>
+                <tr>
+                    <td>CCNA</td>
+                    <td>Agung Sudirman</td>
+                    <td>Lorem ipsum dolor sit amet consectetur.</td>
+                    <td>Pending.</td>
+
+                </tr>
+                <tr>
+                    <td>Laravel</td>
+                    <td>Asep Sudirman</td>
+                    <td>Lorem ipsum dolor sit amet consectetur.</td>
+                    <td>Running.</td>
+
+                </tr>
+                <tr>
+                    <td>Web Basic</td>
+                    <td>Agus Handoyo</td>
+                    <td>Lorem ipsum dolor sit amet consectetur.</td>
+                    <td>Pending.</td>
+                </tr>
+                <tr>
+                    <td colspan="4">Total Kelas yang running : 3</td>
+                </tr>
+            </tbody>
+        </table>
+
+     </div>
+
+
+     <div class="berita">
+        <h1>Hallo ini adalah berita</h1>
+        <span>Dibuat pada : Selasa, 8 September 2026</span>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, excepturi!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, excepturi!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, excepturi!</p>
+     </div>
+
 
 </body>
 
