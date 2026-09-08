@@ -4,11 +4,66 @@
     font-family: "Google Sans", sans-serif;
 }
 
+body{
+    background-color: #f0f0f0;
+}
+
 .text-blue{
     color: #0088cc;
+}
+
+.berita{
+    background-color: #00ffff;
 }
 
 .berita span {
     color: #0088cc;
     font-weight: 700;
+    background-color: #ffbe99;
 }
+
+.card-image{
+    width: 420px; /* dvw, px, % */
+    min-height: 100px;
+    background-image: url('https://cdn.mos.cms.futurecdn.net/v2/t:0,l:464,cw:1193,ch:1193,q:80,w:1193/57jQMDN5MZLYfV8ps8HuZQ.jpg');
+    background-size: cover;
+    color: #ffffff;
+}
+
+.card-image-panel{
+    width: 420px; /* dvw, px, % */
+    min-height: 100px;
+    background: linear-gradient(to top, #00000070, #040d1a70), 
+    url('https://cdn.mos.cms.futurecdn.net/v2/t:0,l:464,cw:1193,ch:1193,q:80,w:1193/57jQMDN5MZLYfV8ps8HuZQ.jpg');
+    background-size: cover;
+    color: #ffffff;
+}
+
+.card-gradient{
+    width: 420px; /* dvw, px, % */
+    min-height: 100px;
+    background: linear-gradient(to top right, #0088cc, #003d3d);
+    background-size: cover;
+    color: #ffffff;
+}
+
+.card-gradient h2{
+    font-size: 1.2rem;
+    font-weight: 900;
+}
+
+.button{
+    text-align: center;
+}
+
+.card-gradient a{
+    width: 100%;
+    text-decoration: none;
+    background-color: #f5f5dc;
+    color: #003d3d;
+}
+
+.card-gradient p{
+    line-height: 1.3;
+}
+
