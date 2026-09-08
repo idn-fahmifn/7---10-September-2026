@@ -213,6 +213,13 @@
     </div>
 
     <div class="container">
+        <h2>Display Block</h2>
+        <p>Karakter dari display block : </p>
+        <ul>
+            <li>ukuran bisa diatur</li>
+            <li>selalu membuat baris baru (1 baris) dikuasai 1 elememen</li>
+            <li>Margin dan padding berlaku</li>
+        </ul>
         <div class="card">
             <div class="d-block">elemen 1</div>
             <div class="d-block">elemen 2</div>
@@ -224,6 +231,13 @@
     </div>
 
     <div class="container">
+        <h2>Display Inline</h2>
+        <p>Karakter dari display Inline : </p>
+        <ul>
+            <li>ukuran tidak bisa diatur (ngikutin dari konten)</li>
+            <li>selalu melanjutkan 1 baris</li>
+            <li>Margin Y tidak berlaku</li>
+        </ul>
         <div class="card">
             <div class="d-inline">elemen 1</div>
             <div class="d-inline">elemen 2</div>
@@ -241,7 +255,45 @@
                 <li class="nav-item">Call Us</li>
             </ul>
         </div>
+    </div>
 
+    <div class="container">
+        <h2>Display Inline Block</h2>
+        <p>Karakter dari display Inline Block : </p>
+        <ul>
+            <li>ukuran bisa diatur (Height atau Width)</li>
+            <li>selalu melanjutkan 1 baris</li>
+            <li>Margin dan padding berlaku</li>
+        </ul>
+        <div class="card">
+            <div class="d-inline-block">elemen 1</div>
+            <div class="d-inline-block v-hidden">elemen 2</div>
+            <div class="d-inline-block">elemen 3</div>
+            <span class="d-inline-block d-none">span1</span>
+            <span class="d-inline-block">span2</span>
+            <span class="d-inline-block">span3</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="kartu relative">Card 1</div>
+        <div class="kartu">Card 2</div>
+        <div class="kartu">Card 3</div>
+    </div>
+
+    <div class="container">
+        <div class="kartu" style="position: relative;">
+            <img src="assets/image/logo-idn-black.png" width="100%" alt="Kartu">
+            <div class="" style="margin-top: 20px; padding: 10px;">
+                <h2>Nama Produk</h2>
+                <p>IDR. 300.000</p>
+            </div>
+            <div class="badge-promo absolute">
+                <span class="">Discount</span>
+            </div>
+        </div>
+        <div class="kartu">Card 2</div>
+        <div class="kartu">Card 3</div>
     </div>
 
 </body>

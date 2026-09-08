@@ -114,8 +114,8 @@ body{
 
 .card span{
     width: 30%;
-    margin: 10px 20px;
-    padding: 20px 30px;
+    margin: 20px 10px;
+    padding: 20px 10px;
     border: 0.4px solid #3e3e3e60;
 }
 
@@ -129,6 +129,48 @@ body{
 
 .nav-item{
     margin: 10px;
+}
+
+.d-inline-block{
+    display: inline-block;
+}
+
+.d-none{
+    display: none;
+}
+
+.v-hidden{
+    visibility: hidden;
+}
+
+.kartu{
+    width: 30%;
+    min-height: 200px;
+    border: 0.4px solid #4e4e4e60;
+    margin: 12px;
+    background-color: #f9f9f9;
+    box-shadow: 2px 1px 8px 0px #4e4e4e70;
+}
+
+.relative{
+    position: relative;
+    top : 100px;
+    left : 30px;
+}
+
+.absolute{
+    position: absolute;
+    top: 0;
+    right: -10px;
+}
+
+.badge-promo{
+    background-color: #ff0000;
+    color: #ffffff;
+    padding: 5px 10px;
+    width: 100px;
+    border-radius: 20px;
+    text-align: center;
 }
 
 
