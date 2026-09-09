@@ -29,6 +29,7 @@ header {
   align-items: center;
   position: fixed;
   flex-wrap: wrap;
+  z-index: 100;
 }
 
 .nav-item {
@@ -51,8 +52,7 @@ header {
 .hero {
   width: 100%;
   height: 90dvh;
-  background:
-    linear-gradient(to right, #06060680), url("https://picsum.photos/1440/800");
+  background:linear-gradient(to right, #06060680), url("https://picsum.photos/1440/800");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -65,10 +65,12 @@ header {
 
 .hero h1 {
   font-size: 5rem;
+  animation: pull-up-animation 1.2s ease-in;
 }
 
 .hero div {
   margin-top: 16px;
+  
 }
 
 .btn-explore {
@@ -77,6 +79,14 @@ header {
   color: var(--white);
   padding: 10px 16px;
   border-radius: 8px;
+  animation: pull-up-animation 1.2s ease-in;
+  transition: 2s ease-in-out;
+}
+
+.btn-explore:hover{
+    background-color: var(--primary-color);
+    position: relative;
+    bottom: 4px;
 }
 
 .portfolio {
@@ -190,8 +200,23 @@ header {
   margin: auto;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 24px;
   gap: 32px;
+}
+
+.contact div{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    transition: 0.7s ease-in-out;
+}
+
+.contact div:hover{
+    background-color: var(--primary-color);
 }
 
 footer{
@@ -228,5 +253,15 @@ footer{
 
     .list-card-focus div{
         width: auto;
+    }
+}
+
+@keyframes pull-up-animation{
+    from  {
+        transform: translateY(24px);
+        opacity: 0.1;
+    } to {
+        transform: translateY(0);
+        opacity: 1;
     }
 }
