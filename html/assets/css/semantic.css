@@ -84,7 +84,7 @@ header {
     margin-top: 24px;
 }
 
-.portfolio h2, .portfolio p{
+.portfolio h2, .portfolio p, .layanan h2, .layanan p{
     text-align: center;
 }
 
@@ -127,6 +127,43 @@ header {
     background-color: var(--secondary);
     padding: 8px 32px;
     border-radius: 8px;
+}
+
+.layanan{
+    width: 80%;
+    min-height: 40dvh;
+    padding: 20px;
+    margin-top: 24px;
+    margin: auto;
+}
+
+.d-grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid: 10px;
+    padding: 24px;
+    margin-top: 24px;
+    gap: 24px;
+}
+
+.list-card-focus{
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.list-card-focus div{
+    width: 40%;
+    background-color: var(--white);
+    padding: 8px;
+    border-radius: 16px;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.list-card-focus p{
+    text-align: left;
 }
 
 
