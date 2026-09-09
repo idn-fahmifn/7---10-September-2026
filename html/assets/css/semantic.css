@@ -99,6 +99,7 @@ header {
   margin-top: 48px;
   justify-content: center;
   gap: 10px;
+  flex-wrap: wrap;
 }
 
 .card {
@@ -106,6 +107,8 @@ header {
   background-color: var(--white);
   padding: 8px;
   border-radius: 16px;
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 .img-project {
@@ -196,4 +199,33 @@ footer{
     background-color: var(--primary-color);
     color: var(--white);
     text-align: center;
+}
+
+/* ukuran tablet */
+
+@media (max-width: 768px){
+
+    .hero h1{
+        font-size: 3rem;
+    }
+
+    .d-grid{
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 768px){
+
+    .hero h1{
+        font-size: 1.4rem;
+    }
+
+    .d-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .list-card-focus div{
+        width: auto;
+    }
 }
