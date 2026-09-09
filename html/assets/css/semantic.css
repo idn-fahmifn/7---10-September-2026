@@ -28,6 +28,7 @@ header {
   justify-content: space-around;
   align-items: center;
   position: fixed;
+  flex-wrap: wrap;
 }
 
 .nav-item {
