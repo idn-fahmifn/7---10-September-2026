@@ -251,6 +251,7 @@ body {
 .main {
   grid-area: main;
   background-color: #0088cc;
+  height: 300px;
 }
 .aside {
   grid-area: aside;
@@ -267,4 +268,18 @@ body {
 .main,
 .footer {
   padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .d-grid{
+        grid-template-columns: repeat(2, 1fr);
+        background-color: #aaff00;
+    }
+
+    .card-grid:nth-child(1){
+        grid-row: auto;
+    }
+    .card-grid:nth-child(4){
+        grid-column: auto;
+    }
 }
