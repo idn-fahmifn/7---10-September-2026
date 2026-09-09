@@ -189,3 +189,11 @@ header {
   margin-top: 24px;
   gap: 32px;
 }
+
+footer{
+    width: 100%;
+    padding: 10px 6px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+}
