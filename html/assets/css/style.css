@@ -283,3 +283,27 @@ body {
         grid-column: auto;
     }
 }
+
+@media (max-width: 425px) {
+
+    body{
+        box-sizing: border-box;
+    }
+    .container{
+        width: 100dvw;
+    }
+
+    .d-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .area{
+        grid-template-areas: 
+        "header"
+        "navbar"
+        "aside"
+        "main"
+        "footer"
+        ;
+    }
+}
