@@ -84,50 +84,181 @@ switch (day.toLocaleLowerCase()) {
     console.log("Hari WFH dan Libur");
     break;
   default:
-    console.log("Hari tidak valid")
+    console.log("Hari tidak valid");
     break;
 }
 
-for(let i = 0; i <= 5; i++){
-    console.log("Kamu sedang mengulang..." + i)
+for (let i = 0; i <= 5; i++) {
+  console.log("Kamu sedang mengulang..." + i);
 }
 
-for(let i = 10; i >= 1; i--){
-    console.log("Kamu sedang menghitung mundur..." + i)
+for (let i = 10; i >= 1; i--) {
+  console.log("Kamu sedang menghitung mundur..." + i);
 }
 
 // continue = melewati
 // break = paksa berenti.
 
-for(let i = 0; i <= 20; i++){
-    if(i === 11){
-        continue;
-    }
-    console.log("Kamu sedang mengulang...", i)
+for (let i = 0; i <= 20; i++) {
+  if (i === 11) {
+    continue;
+  }
+  console.log("Kamu sedang mengulang...", i);
 }
 
-for(let i = 0; i <= 20; i++){
-    if(i === 11){
-        break;
-    }
-    console.log("Kamu sedang mengulang...", i)
+for (let i = 0; i <= 20; i++) {
+  if (i === 11) {
+    break;
+  }
+  console.log("Kamu sedang mengulang...", i);
 }
 
-// offline : 
+// offline :
 // 1 - 30 => ganjil
 
 // online : 1 - 30 = > genap
 
-for(let i = 0; i <= 30; i++){
-    if(i % 2 == 0){
-        continue;
-    }
-    console.log("Bilangan Ganjil", i)
+for (let i = 0; i <= 30; i++) {
+  if (i % 2 == 0) {
+    continue;
+  }
+  console.log("Bilangan Ganjil", i);
 }
 
-for(let i = 0; i <= 30; i++){
-    if(i % 2 != 0){
-        continue;
-    }
-    console.log("Bilangan Genap", i)
+for (let i = 0; i <= 30; i++) {
+  if (i % 2 != 0) {
+    continue;
+  }
+  console.log("Bilangan Genap", i);
 }
+
+let buah = ["apel", "nanas", "jeruk", "strawberry", "pisang", "salak"];
+
+for (b = 0; b < buah.length; b++) {
+  console.log("data semua buah : ", buah[b]);
+}
+
+buah.forEach((list) => console.log(list));
+
+function auth() {
+  let inputPassword = prompt("Masukan Password : ");
+  let password = "belajarjs";
+
+  while (password !== inputPassword) {
+    alert("Password salah");
+    inputPassword = prompt("masukan password..");
+  }
+  console.log("Password sesuai!");
+}
+
+// function classic
+function namaFunction() {
+  // block code yang mau digunakan
+}
+
+// function expression
+let exFuction = function () {
+  // masukan kode disini
+};
+
+let arrFunction = () => {
+  // Masukan kode disini
+};
+
+function hello(nama, tempat) {
+  console.log(`hallo selamat datang mas/mba ${nama} di ${tempat} `);
+}
+
+hello("asep", "IDNetworkers");
+
+let persegiPanjang = function (panjang, lebar) {
+  return panjang * lebar;
+};
+
+console.log(persegiPanjang(10, 5));
+
+// silakan buat rumus luas segitiga menggunakan function expression a * t / 2
+
+let segitiga = function (alas, tinggi) {
+  rumus = (alas * tinggi) / 2;
+  return rumus;
+};
+console.log(segitiga(10, 15));
+
+let penjumlahan = (a, b) => {
+  return a + b;
+};
+
+let pengurangan = (a, b) => {
+  return a - b;
+};
+
+let kali = (a, b) => {
+  return a * b;
+};
+
+let pembagian = (a, b) => {
+  return a / b;
+};
+
+function calc() {
+  let input1 = Number(prompt("masukan angka pertama"));
+  let input2 = Number(prompt("masukan angka kedua"));
+  let opr = prompt("masukan operator (+, -, *, /)");
+
+  let hasil;
+
+  if (opr === "+") {
+    hasil = penjumlahan(input1, input2);
+  } else if (opr === "-") {
+    hasil = pengurangan(input1, input2);
+  }  else if (opr === "*") {
+    hasil = perkalian(input1, input2);
+  } else if (opr === "/") {
+    hasil = pembagian(input1, input2);
+  } else {
+    alert("input kurang tepat")
+  }
+
+  alert(`Hasil dari ${input1} ${opr} ${input2} adalah ${hasil} `)
+
+}
+
+// DOM -> Document Object Model
+
+const title = document.getElementById('judul-halaman')
+const subTitle = document.querySelector('.sub-judul')
+
+
+console.log(subTitle)
+
+title.textContent = "Ini adalah judul yang sudah diubah"
+title.style.color = "#0088cc"
+
+subTitle.classList.add('text-red')
+
+// elemen array untuk elemen baru
+
+buah.forEach((list) => console.log(list));
+
+let listMobil = ['bmw', 'mercedes', 'toyota', 'suzuki', 'daihatsu']
+
+const cars = document.getElementById('cars')
+
+listMobil.forEach((mobil) => {
+    const daftar = document.createElement("li");
+    daftar.textContent = mobil
+
+    cars.appendChild(daftar)
+})
+
+async function loadProject() {
+    const url = "https://6aa261a6ccb3db9689a66bc0.mockapi.io/api-latihan/v1/project"
+    const respon = await fetch(url)
+    const data = await respon.json()
+
+    console.log(data);
+}
+
+
+
