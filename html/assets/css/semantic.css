@@ -118,8 +118,6 @@ header {
   background-color: var(--white);
   padding: 8px;
   border-radius: 16px;
-  flex-grow: 1;
-  flex-shrink: 1;
 }
 
 .img-project {

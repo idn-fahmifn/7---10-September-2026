@@ -157,6 +157,75 @@
     <footer>Made with ♥️ Belajar Web Programming</footer>
 
     <script>
+        async function loadProject() {
+            const listProject = document.querySelector(".list-portfolio");
+            listProject.innerHTML = `<p> <i data-feather="loader"></i> Sedang memuat data</p>`;
+
+            try {
+                const api =
+                    "https://6aa261a6ccb3db9689a66bc0.mockapi.io/api-latihan/v1/project";
+                const res = await fetch(api);
+
+                // berikan respon 200 jika berhasil
+                if (!res.ok) {
+                    throw new Error(`HTTP Error : ${res.status}`);
+                }
+
+                const data = await res.json();
+
+                if (data.length === 0) {
+                    // jika api membuat data null
+                    listProject.innerHTML = `<p> <i data-feather="slash"></i> data tidak ditemukan</p>`;
+                }
+
+                listProject.innerHTML = ``;
+
+                //   loop data untuk menampilkan di UI
+
+                data.forEach((project) => {
+                    const card = document.createElement("div");
+                    card.classList.add("card");
+                    card.setAttribute("data-aos", "fade-up");
+                    card.setAttribute("data-aos-easing", "linear");
+                    card.setAttribute("data-aos-duration", "500");
+
+                    const image = document.createElement("img");
+                    image.setAttribute("src", "https://picsum.photos/220");
+                    image.setAttribute("alt", "gambar-project");
+                    image.setAttribute("width", "100%");
+
+                    const cardBody = document.createElement("div");
+                    cardBody.classList.add("card-body");
+
+                    const titleProject = document.createElement("h3");
+                    titleProject.textContent = project.project_name;
+
+                    const descProject = document.createElement("p");
+                    descProject.textContent = project.desc;
+
+                    const button = document.createElement("div");
+                    button.classList.add("button-area");
+
+                    const btn = document.createElement("a");
+                    btn.setAttribute("href", "https://idn.id");
+                    btn.classList.add("btn-detail");
+                    btn.textContent = "detail";
+
+                    listProject.appendChild(card);
+                    card.appendChild(image);
+                    card.appendChild(cardBody);
+                    cardBody.appendChild(titleProject);
+                    cardBody.appendChild(descProject);
+                    cardBody.appendChild(button);
+                    button.appendChild(btn);
+                });
+            } catch (error) {}
+        }
+
+        loadProject();
+    </script>
+
+    <script>
         feather.replace();
     </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
