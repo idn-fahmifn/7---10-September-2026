@@ -50,46 +50,7 @@
             </p>
 
             <div class="list-portfolio">
-                <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
-                    <img src="https://picsum.photos/220" class="img-project" alt="gambar-project" />
-                    <div class="card-body">
-                        <h3>Nama Project</h3>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                        <div class="button-area">
-                            <a href="" class="btn-detail">Detail</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
-                    <img src="https://picsum.photos/220" class="img-project" alt="gambar-project" />
-                    <div class="card-body">
-                        <h3>Nama Project</h3>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                        <div class="button-area">
-                            <a href="" class="btn-detail">Detail</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
-                    <img src="https://picsum.photos/220" class="img-project" alt="gambar-project" />
-                    <div class="card-body">
-                        <h3>Nama Project</h3>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                        <div class="button-area">
-                            <a href="" class="btn-detail">Detail</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="2000">
-                    <img src="https://picsum.photos/220" class="img-project" alt="gambar-project" />
-                    <div class="card-body">
-                        <h3>Nama Project</h3>
-                        <p>Lorem ipsum dolor sit amet.</p>
-                        <div class="button-area">
-                            <a href="" class="btn-detail">Detail</a>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </section>
         <section class="layanan">
@@ -183,41 +144,56 @@
                 //   loop data untuk menampilkan di UI
 
                 data.forEach((project) => {
-                    const card = document.createElement("div");
-                    card.classList.add("card");
-                    card.setAttribute("data-aos", "fade-up");
-                    card.setAttribute("data-aos-easing", "linear");
-                    card.setAttribute("data-aos-duration", "500");
 
-                    const image = document.createElement("img");
-                    image.setAttribute("src", "https://picsum.photos/220");
-                    image.setAttribute("alt", "gambar-project");
-                    image.setAttribute("width", "100%");
+                    listProject.innerHTML +=
+                        `
+                    <div class="card" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="500">
+                    <img src="https://picsum.photos/220" class="img-project" alt="gambar-project" />
+                    <div class="card-body">
+                        <h3>${project.project_name}</h3>
+                        <p>${project.desc}</p>
+                        <div class="button-area">
+                            <a href="" class="btn-detail">Detail</a>
+                        </div>
+                    </div>
+                </div>
+                    `
 
-                    const cardBody = document.createElement("div");
-                    cardBody.classList.add("card-body");
+                    // const card = document.createElement("div");
+                    // card.classList.add("card");
+                    // card.setAttribute("data-aos", "fade-up");
+                    // card.setAttribute("data-aos-easing", "linear");
+                    // card.setAttribute("data-aos-duration", "500");
 
-                    const titleProject = document.createElement("h3");
-                    titleProject.textContent = project.project_name;
+                    // const image = document.createElement("img");
+                    // image.setAttribute("src", "https://picsum.photos/220");
+                    // image.setAttribute("alt", "gambar-project");
+                    // image.setAttribute("width", "100%");
 
-                    const descProject = document.createElement("p");
-                    descProject.textContent = project.desc;
+                    // const cardBody = document.createElement("div");
+                    // cardBody.classList.add("card-body");
 
-                    const button = document.createElement("div");
-                    button.classList.add("button-area");
+                    // const titleProject = document.createElement("h3");
+                    // titleProject.textContent = project.project_name;
 
-                    const btn = document.createElement("a");
-                    btn.setAttribute("href", "https://idn.id");
-                    btn.classList.add("btn-detail");
-                    btn.textContent = "detail";
+                    // const descProject = document.createElement("p");
+                    // descProject.textContent = project.desc;
 
-                    listProject.appendChild(card);
-                    card.appendChild(image);
-                    card.appendChild(cardBody);
-                    cardBody.appendChild(titleProject);
-                    cardBody.appendChild(descProject);
-                    cardBody.appendChild(button);
-                    button.appendChild(btn);
+                    // const button = document.createElement("div");
+                    // button.classList.add("button-area");
+
+                    // const btn = document.createElement("a");
+                    // btn.setAttribute("href", "https://idn.id");
+                    // btn.classList.add("btn-detail");
+                    // btn.textContent = "detail";
+
+                    // listProject.appendChild(card);
+                    // card.appendChild(image);
+                    // card.appendChild(cardBody);
+                    // cardBody.appendChild(titleProject);
+                    // cardBody.appendChild(descProject);
+                    // cardBody.appendChild(button);
+                    // button.appendChild(btn);
                 });
             } catch (error) {}
         }
